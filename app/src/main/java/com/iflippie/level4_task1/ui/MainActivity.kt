@@ -1,7 +1,6 @@
-package com.iflippie.level4_task1
+package com.iflippie.level4_task1.ui
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -10,7 +9,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.iflippie.level4_task1.repositories.ProductRepository
+import com.iflippie.level4_task1.R
+import com.iflippie.level4_task1.database.ProductRepository
+import com.iflippie.level4_task1.model.Product
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -22,7 +23,8 @@ import kotlinx.coroutines.withContext
 class MainActivity : AppCompatActivity() {
 
     private val shoppingList = arrayListOf<Product>()
-    private val productAdapter = ProductAdapter(shoppingList)
+    private val productAdapter =
+        ProductAdapter(shoppingList)
     private lateinit var productRepository: ProductRepository
     private val mainScope = CoroutineScope(Dispatchers.Main)
 
@@ -30,9 +32,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        supportActionBar?.title = "My Shopping List"
+        setTitle(R.string.app_name)
 
-        productRepository = ProductRepository(this)
+        productRepository =
+            ProductRepository(this)
         initViews()
         fab.setOnClickListener { addProduct()}
     }
@@ -62,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         return if (itBuy.text.toString().isNotBlank() && itMany.text.toString().isNotBlank()) {
             true
         } else {
-            Toast.makeText(this, "Please fill in the fields", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_Message), Toast.LENGTH_SHORT).show()
             false
         }
     }

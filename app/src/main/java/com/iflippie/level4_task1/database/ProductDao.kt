@@ -1,10 +1,10 @@
-package com.iflippie.level4_task1.dao
+package com.iflippie.level4_task1.database
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.iflippie.level4_task1.Product
+import com.iflippie.level4_task1.model.Product
 
 @Dao
 interface ProductDao {

@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">Level4_Task1</string>
+    <string name="app_name">My Shopping List</string>
     <string name="action_settings">Settings</string>
+    <string name="toast_Message">Please fill in the fields</string>
+    <string name="delete_shopping_list">Delete Shopping List</string>
+    <string name="what_to_buy">What to buy?</string>
+    <string name="how_many">How many?</string>
 </resources>

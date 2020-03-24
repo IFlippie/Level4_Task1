@@ -1,9 +1,7 @@
-package com.iflippie.level4_task1.repositories
+package com.iflippie.level4_task1.database
 
 import android.content.Context
-import com.iflippie.level4_task1.Product
-import com.iflippie.level4_task1.ShoppingListRoomDatabase
-import com.iflippie.level4_task1.dao.ProductDao
+import com.iflippie.level4_task1.model.Product
 
 class ProductRepository(context: Context) {
 

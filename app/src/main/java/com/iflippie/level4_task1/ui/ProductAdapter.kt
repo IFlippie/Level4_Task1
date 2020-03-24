@@ -1,9 +1,11 @@
-package com.iflippie.level4_task1
+package com.iflippie.level4_task1.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.iflippie.level4_task1.R
+import com.iflippie.level4_task1.model.Product
 import kotlinx.android.synthetic.main.item_reminder.view.*
 
 class ProductAdapter(private val products: List<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {

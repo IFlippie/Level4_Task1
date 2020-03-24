@@ -1,4 +1,4 @@
-package com.iflippie.level4_task1
+package com.iflippie.level4_task1.model
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
